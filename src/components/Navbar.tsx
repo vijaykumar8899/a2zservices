@@ -4,7 +4,7 @@ import "../styles/Navbar.css"; // Import the CSS file
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
-      <div className="logo">Your Logo</div>
+      <div className="logo">gurukrupaAtoZservices</div>
       <ul className="nav-links">
         <li>Home</li>
         <li>Realestate</li>
