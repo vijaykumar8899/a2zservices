@@ -8,31 +8,50 @@ const Popup: React.FC = () => {
     setShowPopup(false);
   };
 
+  const handleRouteClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setShowPopup(false);
+  };
+
   return (
     <div className={`popup ${showPopup ? "show" : "hide"}`}>
       <div className="popup-content">
         <button className="close-button" onClick={handleClosePopup}>
           ×
         </button>
-        <div className="container">
-          <h2>Container 1</h2>
-          <p>Content for container 1</p>
-          <a href="/route1">Go to Route 1</a>
-        </div>
-        <div className="container">
-          <h2>Container 2</h2>
-          <p>Content for container 2</p>
-          <a href="/route2">Go to Route 2</a>
-        </div>
-        <div className="container">
-          <h2>Container 3</h2>
-          <p>Content for container 3</p>
-          <a href="/route3">Go to Route 3</a>
-        </div>
-        <div className="container">
-          <h2>Container 4</h2>
-          <p>Content for container 4</p>
-          <a href="/route4">Go to Route 4</a>
+        <div className="route-container">
+          <div className="row">
+            <div className="route">
+              <h2>Realestate</h2>
+              <p>Checkout ready house deals</p>
+              <a href="/route1" onClick={handleRouteClick}>
+                Go to Route 1
+              </a>
+            </div>
+            <div className="route">
+              <h2>LIC</h2>
+              <p>Get information about your LIC today</p>
+              <a href="/route2" onClick={handleRouteClick}>
+                Go to Route 2
+              </a>
+            </div>
+          </div>
+          <div className="row">
+            <div className="route">
+              <h2>Job Consultancy</h2>
+              <p>Latest job related information</p>
+              <a href="/route3" onClick={handleRouteClick}>
+                Go to Route 3
+              </a>
+            </div>
+            <div className="route">
+              <h2>Banking Point</h2>
+              <p>Checkout our banking services today</p>
+              <a href="/route4" onClick={handleRouteClick}>
+                Go to Route 4
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

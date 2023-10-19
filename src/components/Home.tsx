@@ -6,7 +6,7 @@ const sivanandhaswamyjiProfile: React.FC = () => {
     <div className="profile-container">
       <div className="image-container">
         <img
-          src="..\assets\img2.jpeg"
+          src="https://firebasestorage.googleapis.com/v0/b/touchweb-c6e16.appspot.com/o/replicate-img2.jpeg?alt=media&token=845dea8d-61a8-4aa2-a34d-398d98b49f84&_gl=1*1vhk7zf*_ga*MTQ0Njc1NzE2Ny4xNjkxNzU3NDc1*_ga_CW55HF8NVT*MTY5NzY5MzM3NS4xNzUuMS4xNjk3NjkzNDYwLjQ2LjAuMA.."
           alt="image"
           className="sivanandhaswamy-image"
         />

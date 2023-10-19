@@ -7,11 +7,12 @@ function App() {
   const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
-    // Show the popup when the component is mounted
-    setShowPopup(true);
+    const hasDisplayedPopup = localStorage.getItem("hasDisplayedPopup");
 
-    // Set a flag in local storage to indicate that the popup has been displayed
-    localStorage.setItem("hasDisplayedPopup", "true");
+    if (!hasDisplayedPopup) {
+      setShowPopup(true);
+      localStorage.setItem("hasDisplayedPopup", "true");
+    }
   }, []);
 
   return (
